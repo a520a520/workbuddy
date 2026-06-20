@@ -1,51 +1,30 @@
 # WorkBuddy 备份仓库 .gitignore
+# 此仓库只备份核心记忆和配置，不包含运行时数据
 
-# 排除整个 app/ 目录（二进制和缓存）
-app/
-
-# 排除临时文件和缓存
+# 运行时数据（不备份）
+claw-state/
+logs/
+local_storage/
+artifact-index/
+connectors-marketplace-state/
+plugin-marketplace-state/
+projects/*/memory/backups/
 *.log
+
+# 敏感信息（不备份）
+settings.json
+settings-*.json
+*.token
+*.secret
+
+# Windows 路径格式文件（不备份）
+projects/Users-*/
+projects/C-*/
+
+# 临时文件
 *.tmp
-*.bak
+*.temp
 *.swp
 *.swo
+*~
 .DS_Store
-Thumbs.db
-
-# 排除数据库文件（二进制，git 处理不了）
-*.db
-*.db-shm
-*.db-wal
-
-# 排除 session、trace、clipboard 等临时数据
-sessions/
-traces/
-clipboard-images/
-shell-snapshots/
-inspiration/
-audit-log/
-usage-log.json
-file-history/
-
-# 排除插件和二进制
-plugins/
-binaries/
-automation-backups/
-mcp-approvals.json
-workspace-state.json
-user-state.json
-tasks/
-
-# 排除 node_modules、venv 等
-node_modules/
-venv/
-env/
-__pycache__/
-
-# 排除敏感文件
-settings.json
-connectors/
-
-# 排除 Windows 残留路径（如果有）
-C:\\
-"C:\\
