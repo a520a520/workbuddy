@@ -1,0 +1,25 @@
+{
+  "claw": {
+    "channels": {},
+    "users": {
+      "YOUR_USER_ID_HERE": {
+        "channels": {
+          "wechatmp": {
+            "enabled": false,
+            "connectionMode": "webhook",
+            "artifactUploadEnabled": true
+          },
+          "yuanbao": {
+            "enabled": false,
+            "channelId": "YOUR_CHANNEL_ID_HERE",
+            "connectionMode": "websocket",
+            "appKey": "YOUR_APP_KEY_HERE",
+            "appSecret": "YOUR_APP_SECRET_HERE"
+          }
+        }
+      }
+    }
+  },
+  "plugins": [],
+  "automations": []
+}
